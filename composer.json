@@ -1,5 +1,5 @@
 {
-    "name": "einar-hansen/laravel-psr-6-cache",
+    "name": "dongasai/laravel-psr-6-cache",
     "description": "A PHP service that allows you to easily communicate with football-data.org apis using Laravel.",
     "keywords": [
         "einar",
@@ -8,7 +8,7 @@
         "cache",
         "psr-6"
     ],
-    "homepage": "https://github.com/einar-hansen/laravel-psr-6-cache",
+    "homepage": "https://github.com/dongasai/laravel-psr-6-cache",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -16,6 +16,11 @@
             "name": "Einar Hansen",
             "email": "einar@einarhansen.dev",
             "homepage": "https://einarhansen.dev",
+            "role": "Developer"
+        },
+        {
+            "name": "dongasai",
+            "email": "1514582970@qq.com"
             "role": "Developer"
         }
     ],
