@@ -68,6 +68,18 @@ class CacheItem implements CacheItemInterface
     }
 
     /**
+     * set hit
+     *
+     * @param $hit
+     * @return self
+     */
+    public function setHit($hit = true):self
+    {
+        $this->hit =$hit;
+        return $this;
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function set(mixed $value): static

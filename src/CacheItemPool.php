@@ -34,11 +34,19 @@ class CacheItemPool implements CacheItemPoolInterface
 
         if (isset($this->deferred[$key])) {
             return clone $this->deferred[$key];
-        } elseif ($this->repository->has($key)) {
-            return new CacheItem($key, $this->repository->get($key), true);
         }
+        $item = $this->repository->get($key);
+        if($item === null){
+            return new CacheItem($key, null, false);
+        }
+        if($item instanceof CacheItem){
+            $item->setHit(true);
+        }else{
+            throw new ValueInvaliadException();
+        }
+        return  $item;
 
-        return new CacheItem($key, null, false);
+
     }
 
     /**
@@ -132,7 +140,7 @@ class CacheItemPool implements CacheItemPoolInterface
 
         if (! $expiresAt) {
             try {
-                $this->repository->forever($item->getKey(), $item->get());
+                $this->repository->forever($item->getKey(), $item);
             } catch (Throwable $exception) {
                 return false;
             }
@@ -149,7 +157,7 @@ class CacheItemPool implements CacheItemPoolInterface
         }
 
         try {
-            $this->repository->put($item->getKey(), $item->get(), $lifetime);
+            $this->repository->put($item->getKey(), $item, $lifetime);
         } catch (Throwable $exception) {
             return false;
         }
