@@ -1,9 +1,11 @@
 # Laravel PSR-6 Cache
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/einar-hansen/laravel-psr-6-cache.svg)](https://packagist.org/packages/einar-hansen/laravel-psr-6-cache)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/dongasai/laravel-psr-6-cache.svg)](https://packagist.org/packages/einar-hansen/laravel-psr-6-cache)
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.0-8892BF.svg)](https://php.net/)
-[![License](https://img.shields.io/packagist/l/einar-hansen/laravel-psr-6-cache.svg)](https://packagist.org/packages/einar-hansen/laravel-psr-6-cache)
-[![Total Downloads](https://img.shields.io/packagist/dt/einar-hansen/laravel-psr-6-cache.svg)](https://packagist.org/packages/einar-hansen/laravel-psr-6-cache)
+[![License](https://img.shields.io/packagist/l/dongasai/laravel-psr-6-cache.svg)](https://packagist.org/packages/einar-hansen/laravel-psr-6-cache)
+[![Total Downloads](https://img.shields.io/packagist/dt/dongasai/laravel-psr-6-cache.svg)](https://packagist.org/packages/einar-hansen/laravel-psr-6-cache)
+
+> Fork from https://github.com/einar-hansen/laravel-psr-6-cache
 
 This package adds PSR-6 cache support to Laravel 5.8 and above. Laravel 6 has PSR-6 support build in which can be used through the `cache.psr6` container alias. You should install symfony cache if you go down this route.
 
@@ -32,7 +34,7 @@ Right now you're all set to start injecting `CacheItemPoolInterface`'d everywher
 In order to install it via composer you should run this command:
 
 ```bash
-composer require einar-hansen/laravel-psr-6-cache
+composer require dongasai/laravel-psr-6-cache
 ```
 
 ## Testing
